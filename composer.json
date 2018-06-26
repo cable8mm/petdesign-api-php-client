@@ -1,0 +1,14 @@
+{
+    "name": "cable8mm/petdesign-api-php-client",
+    "type": "library",
+    "description": "Client library for Petdesign APIs",
+    "keywords": ["petdesign"],
+    "homepage": "https://palgle.com",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8.36"
+    }
+}
