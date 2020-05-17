@@ -2,6 +2,8 @@
 
 namespace Cable8mm\PetdesignClient;
 
+use BadMethodCallException;
+
 class PetdesignClient
 {
     const LIBVER = '1.0.0';
@@ -9,6 +11,8 @@ class PetdesignClient
     const TEST_API_KEY = 'cable8mm';
 
     private $config;
+
+    private $allowed = ['code', 'all'];
 
     public function __construct(array $config = [])
     {
@@ -23,9 +27,14 @@ class PetdesignClient
         return;
     }
 
-    public function getGoods($params = [])
+    public function getGoods($params = ['type' => 'all'])
     {
-        switch ($params['type']) {
+        if (in_array($params['type'], $this->allowed)) {
+            throw new BadMethodCallException(__METHOD__);
+        }
+
+        if ($params) {
+            switch ($params['type']) {
             case 'code':
                 $opts = [
                     'http' => [
@@ -48,6 +57,7 @@ class PetdesignClient
                 $context = stream_context_create($opts);
                 return file_get_contents(self::API_BASE_PATH . '/goods/all/' . $params['page'], false, $context);
             break;
+        }
         }
     }
 
