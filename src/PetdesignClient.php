@@ -33,8 +33,7 @@ class PetdesignClient
             throw new BadMethodCallException(__METHOD__);
         }
 
-        if ($params) {
-            switch ($params['type']) {
+        switch ($params['type']) {
             case 'code':
                 $opts = [
                     'http' => [
@@ -59,7 +58,6 @@ class PetdesignClient
                 $context = stream_context_create($opts);
                 return file_get_contents($this->config['base_path'] . '/goods/all/' . $params['page'], false, $context);
             break;
-            }
         }
     }
 
