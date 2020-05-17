@@ -44,9 +44,11 @@ class PetdesignClient
                     ]
                 ];
                 $context = stream_context_create($opts);
-                return file_get_contents(self::API_BASE_PATH . '/goods/' . $params['code'], false, $context);
+                return file_get_contents($this->config['base_path'] . '/goods/' . $params['code'], false, $context);
             break;
             case 'all':
+                $params['page'] = $params['page'] ?? 1;
+
                 $opts = [
                     'http' => [
                         'method' => 'GET',
@@ -55,7 +57,7 @@ class PetdesignClient
                     ]
                 ];
                 $context = stream_context_create($opts);
-                return file_get_contents(self::API_BASE_PATH . '/goods/all/' . $params['page'], false, $context);
+                return file_get_contents($this->config['base_path'] . '/goods/all/' . $params['page'], false, $context);
             break;
             }
         }
