@@ -29,7 +29,7 @@ class PetdesignClient
 
     public function getGoods($params = ['type' => 'all'])
     {
-        if (in_array($params['type'], $this->allowed)) {
+        if (!isset($params['type']) || !in_array($params['type'], $this->allowed)) {
             throw new BadMethodCallException(__METHOD__);
         }
 
@@ -57,7 +57,7 @@ class PetdesignClient
                 $context = stream_context_create($opts);
                 return file_get_contents(self::API_BASE_PATH . '/goods/all/' . $params['page'], false, $context);
             break;
-        }
+            }
         }
     }
 
