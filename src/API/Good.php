@@ -74,6 +74,8 @@ class Good extends Request
         if (is_null($contents)) {
             throw new UnexpectedValueException('Invalid good id');
         }
+
+        return $contents;
     }
 
     public function page(int $page)
