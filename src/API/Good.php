@@ -1,8 +1,8 @@
 <?php
 
-namespace Cable8mm\PetdesignApiPhpClient\API;
+namespace EscCompany\PetdesignApiClient\API;
 
-use Cable8mm\PetdesignApiPhpClient\Contracts\Request;
+use EscCompany\PetdesignApiClient\Contracts\Request;
 use InvalidArgumentException;
 
 class Good extends Request

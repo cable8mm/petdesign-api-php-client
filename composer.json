@@ -1,11 +1,15 @@
 {
-    "name": "cable8mm/petdesign-api-php-client",
+    "name": "esc-company/petdesign-api-client",
     "type": "library",
     "description": "Client library for Petdesign APIs",
     "keywords": [
-        "petdesign"
+        "petdesign",
+        "api",
+        "composer",
+        "guzzle",
+        "shopping"
     ],
-    "homepage": "https://palgle.com",
+    "homepage": "https://m.holapet.com",
     "license": "MIT",
     "authors": [
         {

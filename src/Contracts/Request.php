@@ -1,6 +1,6 @@
 <?php
 
-namespace Cable8mm\PetdesignApiPhpClient\Contracts;
+namespace EscCompany\PetdesignApiClient\Contracts;
 
 use GuzzleHttp\Client;
 
