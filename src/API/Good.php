@@ -13,7 +13,7 @@ class Good extends Request
     private $from;  // ?updateAfter=2019-09-01
     private $tag;
 
-    private $allowedTags = [
+    public static $allowedTags = [
         '긴급소진', // 유통기한 임박 또는 악성재고 상품으로 분류되어 빠르게 소진 해야 할 상품
         '본사품절', // 유통본사 재고가 없는 상품으로 분류되어 발주 및 입고예정일을 확인 할 수 없는 상품
         '롱-리드',  // 재입고까지 최소 2주 이상 걸리는 리드타임이 긴 상품
@@ -82,7 +82,7 @@ class Good extends Request
 
     public function tag(string $tag)
     {
-        if (!in_array($tag, $this->allowedTags)) {
+        if (!in_array($tag, self::$allowedTags)) {
             throw new InvalidArgumentException(__METHOD__);
         }
 
