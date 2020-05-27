@@ -185,4 +185,6 @@ $RECYCLE.BIN/
 # Build data
 /build/
 
+.env
+
 # End of https://www.gitignore.io/api/git,macos,windows,composer,phpstorm,visualstudiocode
