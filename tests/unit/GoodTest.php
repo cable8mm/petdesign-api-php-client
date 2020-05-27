@@ -39,4 +39,11 @@ class GoodTest extends TestCase
         $this->assertArrayHasKey('goodsNm', $good);
         $this->assertArrayHasKey('categoryNm', $good);
     }
+
+    public function test_get_allowed_tag()
+    {
+        $tags = Good::$allowedTags;
+
+        $this->assertContains('긴급소진', $tags);
+    }
 }
