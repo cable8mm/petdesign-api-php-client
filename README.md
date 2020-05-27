@@ -10,6 +10,26 @@ This HttpClient used for connecting PETDESIGN API System.
 
 It must required **KEY**.
 
+## Install
+
+```
+composer require cable8mm/petdesign-api-php-client
+```
+
+## Usage
+
+## Lookup Petdesign Goods
+
+```php
+<?php
+
+$good = (new Good())->find(30);
+$goods = (new Good())->find()->show(false)->get();
+$goods = (new Good())->find()->page(1)->tag('긴급소진')->get();
+$goods = (new Good())->find()->tag('긴급소진')->get();
+$goods = (new Good())->all()->from('2019-09-01')->get();
+```
+
 ## License
 
 The Phpunit Start Kit is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
