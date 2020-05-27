@@ -51,7 +51,7 @@ abstract class Request
         $contents = json_decode($this->response->getBody()->getContents(), true);
 
         if (!is_null($key) && !is_null($offset)) {
-            return $contents[$key][$offset];
+            return $contents[$key][$offset] ?? null;
         }
 
         return $contents;

@@ -4,6 +4,7 @@ namespace EscCompany\PetdesignApiClient\API;
 
 use EscCompany\PetdesignApiClient\Contracts\Request;
 use InvalidArgumentException;
+use UnexpectedValueException;
 
 class Good extends Request
 {
@@ -64,6 +65,15 @@ class Good extends Request
         $this->id = $id;
 
         return $this->get('data', 0);
+    }
+
+    public function findOrFail(int $id)
+    {
+        $contents = $this->find($id);
+
+        if (is_null($contents)) {
+            throw new UnexpectedValueException('Invalid good id');
+        }
     }
 
     public function page(int $page)
