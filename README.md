@@ -13,7 +13,7 @@ It must required **KEY**.
 ## Install
 
 ```
-composer require cable8mm/petdesign-api-php-client
+composer require esc-company/petdesign-api-client
 ```
 
 ## Usage
