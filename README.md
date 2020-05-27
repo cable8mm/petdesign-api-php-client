@@ -1,3 +1,8 @@
+# DEPLICATED
+This code transfered to `esc-company/petdesign-api-client`
+
+Don't hesitate to visit https://github.com/esc-company/petdesign-api-client
+
 # Unofficial Petdesign API PhpClient
 
 [![StyleCI](https://github.styleci.io/repos/138573135/shield?branch=master)](https://github.styleci.io/repos/138573135)
