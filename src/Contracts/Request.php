@@ -8,13 +8,7 @@ abstract class Request
 {
     const API_BASE_PATH = 'http://api.petsdesign.co.kr/';
 
-    /**
-     * API Key
-     *
-     * @var string
-     * @see https://github.com/junglebookDevTeam/API or dev@junglebook.co.kr
-     */
-    protected static $apiKey;
+    protected $options;
 
     protected $query = '';
 
@@ -30,24 +24,29 @@ abstract class Request
      */
     protected $client;
 
+    abstract protected function builder();
+
     public function __construct(string $apiKey)
     {
-        self::$apiKey = $apiKey;
-
-        $config = [
+        $this->options = [
             'base_uri' => self::API_BASE_PATH,
             'headers' => [
                 'cache-control' => 'no-cache',
-                'Authorization' => self::$apiKey,
+                'Authorization' => $apiKey,
             ]
         ];
 
-        $this->client = new Client($config);
+        $this->client = new Client();
+    }
+
+    public function setApiKey($apiKey)
+    {
+        $this->options['headers']['Authorization'] = $apiKey;
     }
 
     public function get($key = null, $offset = null)
     {
-        $this->response = $this->client->get($this->query);
+        $this->response = $this->builder()->client->get($this->query, $this->options);
 
         $contents = json_decode($this->response->getBody()->getContents(), true);
 

@@ -22,7 +22,7 @@ class Good extends Request
         '단가인상', // 단가인상 예정인 상품
     ];
 
-    private function builder()
+    protected function builder()
     {
         $this->query = 'goods/';
 
@@ -59,16 +59,11 @@ class Good extends Request
         return $this;
     }
 
-    public function find(int $id = null)
+    public function find(int $id)
     {
         $this->id = $id;
 
-        // 특정상품 조회
-        if (!is_null($id)) {
-            return $this->builder()->get('data', 0);
-        }
-
-        return $this;
+        return $this->get('data', 0);
     }
 
     public function page(int $page)
