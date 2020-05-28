@@ -34,7 +34,7 @@ class Good extends Request
 
         // 태그로 조회
         if (!empty($this->tag)) {
-            $this->query .= '!' . $this->tag;
+            $this->query .= 'tag';
         } else {
             // 전체상품 조회
             if ($this->visible === true) {
@@ -55,6 +55,11 @@ class Good extends Request
         // 페이지
         if (empty($this->from)) {
             $this->query .= '/' . $this->page;
+        }
+
+        // 태그 쿼리
+        if (!empty($this->tag)) {
+            $this->query .= '?query=' . $this->tag;
         }
 
         return $this;

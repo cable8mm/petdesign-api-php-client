@@ -46,4 +46,11 @@ class GoodTest extends TestCase
 
         $this->assertContains('긴급소진', $tags);
     }
+
+    public function test_tag_goods()
+    {
+        $goods = (new Good($this->apiKey))->tag(Good::$allowedTags[0])->get();
+
+        $this->assertIsArray($goods);
+    }
 }
