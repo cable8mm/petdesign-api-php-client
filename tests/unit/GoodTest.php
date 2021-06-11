@@ -12,7 +12,8 @@ class GoodTest extends TestCase
 
     protected function setUp(): void
     {
-        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+        $dotenv = Dotenv::createImmutable(__DIR__.'/../../');
+
         $dotenv->load();
 
         $this->apiKey = getenv('JUNGLE_BOOK_API_KEY');
@@ -40,17 +41,26 @@ class GoodTest extends TestCase
         $this->assertArrayHasKey('categoryNm', $good);
     }
 
-    public function test_get_allowed_tag()
+    public function test_page()
     {
-        $tags = Good::$allowedTags;
-
-        $this->assertContains('긴급소진', $tags);
-    }
-
-    public function test_tag_goods()
-    {
-        $goods = (new Good($this->apiKey))->tag(Good::$allowedTags[0])->get();
+        $goods = (new Good($this->apiKey))->page(1)->get();
 
         $this->assertIsArray($goods);
+    }
+
+    public function test_goods()
+    {
+        $goods = (new Good($this->apiKey))->get();
+
+        $this->assertIsArray($goods);
+    }
+
+    public function test_visible_parameter()
+    {
+        $visibleGoods = (new Good($this->apiKey))->show(true)->get();
+        $this->assertIsArray($visibleGoods);
+
+        $invisibleGoods = (new Good($this->apiKey))->show(false)->get();
+        $this->assertIsArray($invisibleGoods);
     }
 }
