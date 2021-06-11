@@ -2,8 +2,8 @@
 
 namespace EscCompany\PetdesignApiClient\Tests\Functional;
 
-use EscCompany\PetdesignApiClient\API\Good;
 use Dotenv\Dotenv;
+use EscCompany\PetdesignApiClient\API\Good;
 use PHPUnit\Framework\TestCase;
 
 class GoodTest extends TestCase

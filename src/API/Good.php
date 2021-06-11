@@ -17,8 +17,9 @@ class Good extends Request
     {
         $this->query = 'goods/';
 
-        if (!empty($this->id)) {
+        if (! empty($this->id)) {
             $this->query .= $this->id;
+
             return $this;
         }
 
@@ -33,7 +34,7 @@ class Good extends Request
         }
 
         // 조건 파라미터
-        if (!empty($this->from)) {
+        if (! empty($this->from)) {
             $this->query .= '?updateAfter='.$this->from;
         }
 

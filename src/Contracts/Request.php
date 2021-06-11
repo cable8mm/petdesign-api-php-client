@@ -13,7 +13,7 @@ abstract class Request
     protected $query = '';
 
     /**
-     * return response from API Server
+     * return response from API Server.
      *
      * @var GuzzleHttp\Psr7\Response
      */
@@ -33,7 +33,7 @@ abstract class Request
             'headers' => [
                 'cache-control' => 'no-cache',
                 'Authorization' => $apiKey,
-            ]
+            ],
         ];
 
         $this->client = new Client();
@@ -50,7 +50,7 @@ abstract class Request
 
         $contents = json_decode($this->response->getBody()->getContents(), true);
 
-        if (!is_null($key) && !is_null($offset)) {
+        if (! is_null($key) && ! is_null($offset)) {
             return $contents[$key][$offset] ?? null;
         }
 
