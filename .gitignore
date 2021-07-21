@@ -188,3 +188,4 @@ $RECYCLE.BIN/
 .env
 
 # End of https://www.gitignore.io/api/git,macos,windows,composer,phpstorm,visualstudiocode
+.vscode/launch.json

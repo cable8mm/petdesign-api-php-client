@@ -11,7 +11,6 @@ class Good extends Request
     private $visible = true;
     private $id;
     private $from;  // ?updateAfter=2019-09-01
-    private $tag;
 
     protected function builder()
     {

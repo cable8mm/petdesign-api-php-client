@@ -54,6 +54,10 @@ abstract class Request
             return $contents[$key][$offset] ?? null;
         }
 
+        if (! is_null($offset)) {
+            return $contents[$offset] ?? null;
+        }
+
         return $contents;
     }
 }
