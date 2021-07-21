@@ -43,7 +43,7 @@
     "prefer-stable": true,
     "scripts": {
         "test": [
-            "./vendor/bin/phpunit --verbose --testdox-text tests"
+            "./vendor/bin/phpunit --verbose tests"
         ]
     }
 }
