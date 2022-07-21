@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Build
 
 on:
   push:
@@ -8,10 +8,18 @@ on:
 
 jobs:
   build:
+    name: PHP Unit Tests
+
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Make .env
+        run: |
+          echo "JUNGLE_BOOK_API_KEY=$JUNGLE_BOOK_API_KEY" > .env
+        env:
+          JUNGLE_BOOK_API_KEY: ${{ secrets.JUNGLE_BOOK_API_KEY }}
 
       - name: Validate composer.json and composer.lock
         run: composer validate
@@ -19,5 +27,8 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
+      # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
+      # Docs: https://getcomposer.org/doc/articles/scripts.md
+
       - name: Run test suite
-        run: composer test
+        run: composer run test
