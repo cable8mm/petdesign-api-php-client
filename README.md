@@ -1,3 +1,8 @@
+# DEPLICATED
+This code transfered to `esc-company/petdesign-api-client`
+
+Don't hesitate to visit https://github.com/esc-company/petdesign-api-client
+
 # Unofficial Petdesign API PhpClient
 
 [![Latest Stable Version](http://poser.pugx.org/esc-company/petdesign-api-client/v)](https://packagist.org/packages/esc-company/petdesign-api-client)
