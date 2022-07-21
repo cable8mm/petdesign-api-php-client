@@ -1,5 +1,5 @@
 {
-    "name": "esc-company/petdesign-api-client",
+    "name": "cable8mm/petdesign-api-php-client",
     "type": "library",
     "description": "Client library for Petdesign APIs",
     "keywords": [
@@ -9,7 +9,7 @@
         "guzzle",
         "shopping"
     ],
-    "homepage": "https://m.holapet.com",
+    "homepage": "https://github.com/cable8mm",
     "license": "MIT",
     "authors": [
         {

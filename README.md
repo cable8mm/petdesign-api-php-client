@@ -1,15 +1,10 @@
-# DEPLICATED
-This code transfered to `esc-company/petdesign-api-client`
-
-Don't hesitate to visit https://github.com/esc-company/petdesign-api-client
-
 # Unofficial Petdesign API PhpClient
 
-[![Latest Stable Version](http://poser.pugx.org/esc-company/petdesign-api-client/v)](https://packagist.org/packages/esc-company/petdesign-api-client)
-[![Total Downloads](http://poser.pugx.org/esc-company/petdesign-api-client/downloads)](https://packagist.org/packages/esc-company/petdesign-api-client)
+[![Latest Stable Version](http://poser.pugx.org/cable8mm/petdesign-api-php-client/v)](https://packagist.org/packages/cable8mm/petdesign-api-php-client)
+[![Total Downloads](http://poser.pugx.org/cable8mm/petdesign-api-php-client/downloads)](https://packagist.org/packages/cable8mm/petdesign-api-php-client)
 [![StyleCI](https://github.styleci.io/repos/267242299/shield?branch=master)](https://github.styleci.io/repos/267242299)
-[![Build](https://github.com/esc-company/petdesign-api-client/actions/workflows/php.yml/badge.svg)](https://github.com/esc-company/petdesign-api-client/actions/workflows/php.yml)
-[![License](http://poser.pugx.org/esc-company/petdesign-api-client/license)](https://packagist.org/packages/esc-company/petdesign-api-client)
+[![Build](https://github.com/cable8mm/petdesign-api-php-client/actions/workflows/php.yml/badge.svg)](https://github.com/cable8mm/petdesign-api-php-client/actions/workflows/php.yml)
+[![License](http://poser.pugx.org/cable8mm/petdesign-api-php-client/license)](https://packagist.org/packages/cable8mm/petdesign-api-php-client)
 
 ## About
 
@@ -20,7 +15,7 @@ It must required **KEY**.
 ## Install
 
 ```
-composer require esc-company/petdesign-api-client
+composer require cable8mm/petdesign-api-php-client
 ```
 
 ## Usage
