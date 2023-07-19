@@ -1,15 +1,18 @@
 <?php
 
-namespace EscCompany\PetdesignApiClient\API;
+namespace Cable8mm\PetdesignApiPhpClient\API;
 
-use EscCompany\PetdesignApiClient\Contracts\Request;
+use Cable8mm\PetdesignApiPhpClient\Contracts\Request;
 use UnexpectedValueException;
 
 class Good extends Request
 {
     private $page = 1;
+
     private $visible = true;
+
     private $id;
+
     private $from;  // ?updateAfter=2019-09-01
 
     protected function builder()
@@ -78,7 +81,7 @@ class Good extends Request
     }
 
     /**
-     * @param string $date Y-m-d
+     * @param  string  $date Y-m-d
      * @return $this
      */
     public function from(string $date)

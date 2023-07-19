@@ -1,11 +1,5 @@
 # Unofficial Petdesign API PhpClient
 
-[![Latest Stable Version](http://poser.pugx.org/cable8mm/petdesign-api-php-client/v)](https://packagist.org/packages/cable8mm/petdesign-api-php-client)
-[![Total Downloads](http://poser.pugx.org/cable8mm/petdesign-api-php-client/downloads)](https://packagist.org/packages/cable8mm/petdesign-api-php-client)
-[![StyleCI](https://github.styleci.io/repos/267242299/shield?branch=master)](https://github.styleci.io/repos/267242299)
-[![Build](https://github.com/cable8mm/petdesign-api-php-client/actions/workflows/php.yml/badge.svg)](https://github.com/cable8mm/petdesign-api-php-client/actions/workflows/php.yml)
-[![License](http://poser.pugx.org/cable8mm/petdesign-api-php-client/license)](https://packagist.org/packages/cable8mm/petdesign-api-php-client)
-
 ## About
 
 This HttpClient used for connecting PETDESIGN API System.
@@ -46,7 +40,7 @@ We suggsest Fasade class for your convinient. As soon...
 ## Test
 
 ```bash
-composer run test
+composer test
 ```
 
 ## License

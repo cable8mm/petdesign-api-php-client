@@ -19,19 +19,20 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
+        "php": "^7.2||^8.0",
         "guzzlehttp/guzzle": "^6.5"
     },
     "require-dev": {
         "vlucas/phpdotenv": "^4.1",
-        "phpunit/phpunit": "^8"
+        "phpunit/phpunit": "^8",
+        "laravel/pint": "^1.10"
     },
     "autoload": {
         "classmap": [
             "src/"
         ],
         "psr-4": {
-            "": "src/"
+            "Cable8mm\\PetdesignApiPhpClient\\": "src/"
         }
     },
     "autoload-dev": {
@@ -44,6 +45,9 @@
     "scripts": {
         "test": [
             "./vendor/bin/phpunit --verbose tests"
+        ],
+        "lint": [
+            "./vendor/bin/pint"
         ]
     }
 }

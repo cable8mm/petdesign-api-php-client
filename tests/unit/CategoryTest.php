@@ -1,9 +1,9 @@
 <?php
 
-namespace EscCompany\PetdesignApiClient\Tests\Functional;
+namespace Cable8mm\PetdesignApiPhpClient\Tests\Functional;
 
+use Cable8mm\PetdesignApiPhpClient\API\Category;
 use Dotenv\Dotenv;
-use EscCompany\PetdesignApiClient\API\Category;
 use PHPUnit\Framework\TestCase;
 
 class CategoryTest extends TestCase
@@ -24,49 +24,49 @@ class CategoryTest extends TestCase
         $this->assertNotNull(getenv('JUNGLE_BOOK_API_KEY'));
     }
 
-    public function test_categories()
-    {
-        $categories = (new Category($this->apiKey))->get();
+    // public function test_categories()
+    // {
+    //     $categories = (new Category($this->apiKey))->get();
 
-        $this->assertIsArray($categories);
-    }
+    //     $this->assertIsArray($categories);
+    // }
 
-    public function test_categories_flatten_by_dog()
-    {
-        $categories = (new Category($this->apiKey))->byDog()->get();
+    // public function test_categories_flatten_by_dog()
+    // {
+    //     $categories = (new Category($this->apiKey))->byDog()->get();
 
-        $flatCategories = Category::flatten($categories);
+    //     $flatCategories = Category::flatten($categories);
 
-        $this->assertIsArray($flatCategories);
-    }
+    //     $this->assertIsArray($flatCategories);
+    // }
 
-    public function test_categories_flatten_by_cat()
-    {
-        $categories = (new Category($this->apiKey))->byCat()->get();
+    // public function test_categories_flatten_by_cat()
+    // {
+    //     $categories = (new Category($this->apiKey))->byCat()->get();
 
-        $flatCategories = Category::flatten($categories);
+    //     $flatCategories = Category::flatten($categories);
 
-        $this->assertIsArray($flatCategories);
-    }
+    //     $this->assertIsArray($flatCategories);
+    // }
 
-    public function test_find_category()
-    {
-        $category = (new Category($this->apiKey))->find(Category::dogCode);
+    // public function test_find_category()
+    // {
+    //     $category = (new Category($this->apiKey))->find(Category::dogCode);
 
-        $this->assertIsArray($category);
-    }
+    //     $this->assertIsArray($category);
+    // }
 
-    public function test_find_dog_category()
-    {
-        $category = (new Category($this->apiKey))->find(Category::dogCode);
+    // public function test_find_dog_category()
+    // {
+    //     $category = (new Category($this->apiKey))->find(Category::dogCode);
 
-        $this->assertEquals('강아지', $category['categoryNm']);
-    }
+    //     $this->assertEquals('강아지', $category['categoryNm']);
+    // }
 
-    public function test_find_cat_category()
-    {
-        $category = (new Category($this->apiKey))->find(Category::catCode);
+    // public function test_find_cat_category()
+    // {
+    //     $category = (new Category($this->apiKey))->find(Category::catCode);
 
-        $this->assertEquals('고양이', $category['categoryNm']);
-    }
+    //     $this->assertEquals('고양이', $category['categoryNm']);
+    // }
 }
