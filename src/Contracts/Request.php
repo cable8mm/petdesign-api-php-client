@@ -1,12 +1,12 @@
 <?php
 
-namespace EscCompany\PetdesignApiClient\Contracts;
+namespace Cable8mm\PetdesignApiPhpClient\Contracts;
 
 use GuzzleHttp\Client;
 
 abstract class Request
 {
-    const API_BASE_PATH = 'http://api.petsdesign.co.kr/';
+    public const API_BASE_PATH = 'http://api.petsdesign.co.kr/';
 
     protected $options;
 

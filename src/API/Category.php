@@ -1,22 +1,25 @@
 <?php
 
-namespace EscCompany\PetdesignApiClient\API;
+namespace Cable8mm\PetdesignApiPhpClient\API;
 
-use EscCompany\PetdesignApiClient\Contracts\Request;
+use Cable8mm\PetdesignApiPhpClient\Contracts\Request;
 use UnexpectedValueException;
 
 class Category extends Request
 {
-    const catCode = '032';
-    const dogCode = '031';
+    public const catCode = '032';
+
+    public const dogCode = '031';
 
     /**
      * Category code.
      *
      * @var string
+     *
      * @example 032001001011 (고양이 > 사료 > 브랜드사료 > 로얄캐닌)
      */
     private $categoryCode;
+
     private static $childrenKey = 'children';
 
     protected function builder()
