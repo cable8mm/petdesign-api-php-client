@@ -1,5 +1,5 @@
 {
-    "name": "cable8mm/petdesign-api-php-client",
+    "name": "esc-company/petdesign-api-client",
     "type": "library",
     "description": "Client library for Petdesign APIs",
     "keywords": [
